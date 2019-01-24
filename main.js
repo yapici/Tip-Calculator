@@ -1,3 +1,14 @@
+window.onload = function(){
+  // Calculate Button click handler
+  document.getElementById("calculate-button").onclick = function() {
+    let tipAmoount = calculateTip();
+
+    //Display the tip
+    document.getElementById("total-tip").style.display = "block";
+    document.getElementById("tip").innerHTML = tipAmoount;
+  };
+}
+
 function calculateTip() {
   let billAmt = document.getElementById("billamt").value;
   let serviceQual = document.getElementById("service-quality").value;
@@ -28,12 +39,3 @@ function calculateTip() {
 
   return total;
 }
-
-// Calculate Button click handler
-document.getElementById("calculate-button").onclick = function() {
-  let tipAmoount = calculateTip();
-
-  //Display the tip
-  document.getElementById("total-tip").style.display = "block";
-  document.getElementById("tip").innerHTML = tipAmoount;
-};
